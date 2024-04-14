@@ -14,7 +14,6 @@ let cart = [];
 cartBtn.addEventListener("click", () => {
   cartModal.style.display = "flex";
   updateCartModal();
-  
 });
 
 cartModal.addEventListener("click", (event) => {
@@ -29,29 +28,27 @@ closeModalBtn.addEventListener("click", () => {
 
 menu.addEventListener("click", (event) => {
   let parentButton = event.target.closest(".add-to-cart-btn");
-  
+
   if (parentButton) {
     const name = parentButton.getAttribute("data-name");
     const price = parseFloat(parentButton.getAttribute("data-price"));
     addToCart(name, price);
     Toastify({
-        text: "Produto Adicionado com Sucesso!",
-        duration: 3000,
-        destination: "https://github.com/apvarun/toastify-js",
-        newWindow: true,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "rgb(34 197 94 / var(--tw-bg-opacity));",
-        },
-        onClick: function(){} // Callback after click
-      }).showToast();
-    }
-    
+      text: "Produto Adicionado com Sucesso!",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "rgb(34 197 94 / var(--tw-bg-opacity));",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
   }
-);
+});
 
 function addToCart(name, price) {
   const existingItem = cart.find((item) => item.name === name);
@@ -136,21 +133,23 @@ addressInput.addEventListener("input", (event) => {
 checkoutBtn.addEventListener("click", () => {
   if (cart.length === 0) return;
   if (addressInput.value === "") {
-    addressInput.classList.add("border-red-500");
+    addressInput.classList.add("border-red-500")
     return;
   }
 
-  const cartItems = cart.map((item) => {
-    return (
-        `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} | `
-    )
-  }).join("")
-  const message = encodeURIComponent(cartItems)
-  const phone = "83991647073"
-  window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}` , "_blank")
+  const cartItems = cart
+    .map((item) => {
+      return `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} | `;
+    })
+    .join("");
+  const message = encodeURIComponent(cartItems);
+  const phone = "83991647073";
+  window.open(
+    `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`,
+    "_blank"
+  );
 
   cart = [];
-
 });
 
 function checkRestaurantOpen() {
