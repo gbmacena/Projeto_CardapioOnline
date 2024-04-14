@@ -146,8 +146,8 @@ checkoutBtn.addEventListener("click", () => {
     return;
   }
   if (addressInput.value === "") {
-    addressInput.classList.add("border-red-500");
     addressWarn.classList.remove("hidden");
+    addressInput.classList.add("border-red-500");
     return;
   }
 

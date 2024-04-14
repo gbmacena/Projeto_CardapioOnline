@@ -6,9 +6,6 @@ module.exports = {
       'sans': ['Poppins' , 'sans-serif']
     },
     extend: {
-      backgroundImage: {
-        "home": "url('/assets/bg.jpg')",
-      },
     },
   },
   plugins: [],
