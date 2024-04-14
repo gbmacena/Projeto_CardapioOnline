@@ -127,13 +127,27 @@ addressInput.addEventListener("input", (event) => {
   let inputValue = event.target.value;
   if (inputValue !== "") {
     addressInput.classList.remove("border-red-500");
+    addressWarn.classList.add("hidden");
   }
 });
 
 checkoutBtn.addEventListener("click", () => {
-  if (cart.length === 0) return;
+  if (cart.length === 0) {
+    Toastify({
+      text: "Adicione itens ao carrinho antes de finalizar o pedido!",
+      duration: 3000,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      style: {
+        background: "rgb(34 197 94 / var(--tw-bg-opacity));",
+      },
+      close: true,
+    }).showToast();
+    return;
+  }
   if (addressInput.value === "") {
-    addressInput.classList.add("border-red-500")
+    addressInput.classList.add("border-red-500");
+    addressWarn.classList.remove("hidden");
     return;
   }
 
@@ -148,13 +162,11 @@ checkoutBtn.addEventListener("click", () => {
     `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`,
     "_blank"
   );
-
-  cart = [];
 });
 
 function checkRestaurantOpen() {
   const data = new Date();
-  const hora = data.getHours;
+  const hora = data.getHours();
   return hora >= 18 && hora < 22;
 }
 
