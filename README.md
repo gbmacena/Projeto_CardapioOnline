@@ -1,40 +1,33 @@
-Burguer do Povo
-Descrição
-O Burguer do Povo é um projeto de cardápio online que permite aos usuários realizar pedidos diretamente pelo WhatsApp. Com uma interface intuitiva e rápida, os clientes podem selecionar seus itens, confirmar os pedidos e enviá-los para o restaurante com facilidade.
+# **Burguer do Povo**
 
-Tecnologias Utilizadas
-HTML: Estrutura da página para criar os elementos do cardápio.
-CSS: Estilização e design responsivo da interface.
-JavaScript: Implementação da lógica para geração de QR Codes e interação dinâmica.
-Tailwind CSS: Biblioteca CSS para design moderno e rápido.
-Como Rodar o Projeto
-Clone ou faça o download deste repositório:
+> Um cardápio online simples e prático, com pedidos enviados diretamente pelo WhatsApp!
 
+---
 
-git clone https://github.com/seuusuario/burguer-do-povo.git
-Navegue até a pasta do projeto:
+##  Descrição
 
+O **Burguer do Povo** é um projeto de cardápio online que simplifica o processo de fazer pedidos. Com apenas alguns cliques, você pode:
 
-cd burguer-do-povo
-Abra o arquivo index.html diretamente em seu navegador.
+1. Navegar pelo cardápio.  
+2. Adicionar itens ao carrinho.  
+3. Confirmar o pedido.  
+4. Enviar o resumo direto para o WhatsApp do restaurante!
 
-Como Funciona
-Navegação:
+---
 
-Explore o cardápio com as opções disponíveis.
-Adição ao Carrinho:
+## Tecnologias Utilizadas
 
-Escolha os itens desejados e adicione-os ao carrinho.
-Confirmação do Pedido:
+- **HTML**: Estruturação da página.  
+- **CSS**: Estilização e design da interface.  
+- **JavaScript**: Lógica para geração do QR Code e interatividade.  
+- **Tailwind CSS**: Biblioteca CSS para design moderno e responsivo.
 
-Revise os itens no carrinho e confirme o pedido.
-Envio via WhatsApp:
+---
 
-Clique no botão para gerar a mensagem automática com o resumo do pedido.
-A mensagem será enviada diretamente para o WhatsApp do restaurante.
-Recursos em Destaque
-Interface simples e responsiva.
-Integração direta com o WhatsApp para pedidos.
-Uso de QR Code para facilitar o processo.
-📌 Sinta-se à vontade para contribuir ou sugerir melhorias!
+## 🛠 Como Rodar o Projeto
 
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. **Clone este repositório**:  
+   ```bash
+   git clone https://github.com/gbmacena/burguer-do-povo.git
